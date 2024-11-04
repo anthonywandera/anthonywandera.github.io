@@ -119,15 +119,29 @@
         </p>
       </div>
 
-      <div class="wrie-to-me">
+      <div class="write-to-me">
         <span class="feature-icon"><i class="fa-solid fa-pen-nib"></i></span>
         <h2 class="feature-title">Write to me</h2>
-        <p class="feature-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-          perspiciatis soluta iure explicabo vitae saepe totam? Consectetur
-          rerum molestias nesciunt commodi itaque nemo atque beatae quae
-          assumenda? Quasi, placeat obcaecati!
-        </p>
+        <form class="form-write-to-me">
+          <input
+            class="input-message"
+            placeholder="Type your message here"
+            type="text"
+            name="messag-body"
+            required
+          />
+
+          <input
+            class="input-from"
+            placeholder="Enter you name"
+            type="text"
+            name="sender"
+            required
+          />
+          <button class="form-submit">
+            <i class="fa-solid fa-paper-plane send-icon"></i>
+          </button>
+        </form>
       </div>
     </section>
   </body>
