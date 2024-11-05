@@ -9,9 +9,10 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: #060606;
   color: #eee;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 .profile-card {
@@ -19,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-color);
 }
 
 .anthony-wandera {
@@ -176,4 +178,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.section {
+  opacity: 1;
+  transition: transform 2s, opacity 2s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateX(50%);
 }
