@@ -1,5 +1,5 @@
-// import "https://kit.fontawesome.com/b47e2157f1.js";
-// import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js";
+import "https://kit.fontawesome.com/b47e2157f1.js";
+import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js";
 
 export const loader_svg = (
   <i className="fa-solid fa-circle-notch loader-icon"></i>
