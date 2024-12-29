@@ -11,7 +11,7 @@ body {
   padding: 0 5rem;
 }
 
-#modal {
+/* #modal {
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -23,9 +23,9 @@ body {
   left: 0;
 
   z-index: 100;
-}
+} */
 
-dialog {
+#modal dialog {
   top: 50%;
   left: 50%;
   padding: 2rem;
@@ -33,6 +33,41 @@ dialog {
 
   border: none;
   border-radius: 0.3rem;
+
+  background-color: #222;
+  color: inherit;
+}
+
+#modal .closeModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: none;
+  padding: 0.5rem;
+
+  color: inherit;
+}
+
+.freelance-accounts {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  margin-top: 1rem;
+}
+
+.freelance-accounts li {
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+
+  background-color: #111;
+  border-radius: 0.3rem;
+}
+
+button:focus {
+  outline: none;
 }
 
 a:link,
