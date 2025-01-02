@@ -384,7 +384,7 @@ progress::-webkit-progress-value {
 .project {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -440,6 +440,59 @@ progress::-webkit-progress-value {
   color: #ffae00;
   padding: 0;
   margin: 0;
+  position: relative;
+  z-index: 500;
+}
+
+.about-project {
+  position: relative;
+  width: 100%;
+}
+
+.project-info {
+  opacity: 1;
+  background-color: #111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+
+  transform: translateY(10%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: all 0.5s linear;
+}
+
+.project:hover .project-info {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.project-description {
+  border-top: solid 1px currentColor;
+  padding-top: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.project-skills {
+  margin-top: 0.9rem;
+  opacity: 0.5;
+}
+
+.project-skill {
+  display: inline-block;
+  margin: 0.2rem 0.2rem;
+  padding: 0.2rem 1rem;
+  border: solid 1px currentColor;
+  border-radius: 200rem;
 }
 
 /* SECTION */
@@ -628,3 +681,5 @@ progress::-webkit-progress-value {
 .section-bye img {
   height: 100%;
 }
+
+/* ######### */

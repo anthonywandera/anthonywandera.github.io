@@ -16,8 +16,8 @@ export default function Projects() {
   let displayData = "";
 
   if (projectList && projectList.length > 0) {
-    projects.current = projectList.map(({ title, image }) => {
-      return <Project key={title} title={title} image={image} />;
+    projects.current = projectList.map(({ url, ...props }) => {
+      return <Project key={url} url={url} {...props} />;
     });
 
     displayData = projects.current.slice(

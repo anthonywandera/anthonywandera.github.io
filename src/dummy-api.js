@@ -25,124 +25,54 @@ export const skillData = [
 // Projects
 import projectImg1 from "./assets/projects/project-1.png";
 import projectImg2 from "./assets/projects/project-2.png";
-import projectImg3 from "./assets/projects/project-4.png";
-import projectImg4 from "./assets/projects/project-5.png";
+import projectImg5 from "./assets/projects/project-3.png";
+// import projectImg3 from "./assets/projects/project-4.png";
+// import projectImg4 from "./assets/projects/project-5.png";
 
 export const projectData = [
   {
+    title: "Sunflora",
+    image: projectImg5,
+    url: "https://sunflora-project-preview.netlify.app/",
+    skills: ["html", "js", "css", "react", "redux", "tailwind"],
+    client: "tom",
+    description:
+      "lorem ispum is a common dummy text used by progmamers to fill text content",
+  },
+  {
     title: "Omnifood",
     image: projectImg1,
+    url: "https://omnifood-ya-anto.netlify.app/",
+    skills: ["html", "js", "css"],
+    client: "jyle",
+    description:
+      "lorem ispum is a common dummy text used by progmamers to fill text content",
   },
   {
     title: "Forkify",
     image: projectImg2,
+    url: "https://forkify-ya-anto.netlify.app/",
+    skills: ["html", "js", "css", "api"],
+    client: "tom",
+    description:
+      "lorem ispum is a common dummy text used by progmamers to fill text content",
   },
-  {
-    title: "Login form",
-    image: projectImg3,
-  },
-  {
-    title: "Fancy login",
-    image: projectImg4,
-  },
-
-  // duplicates
-  {
-    title: Math.random(),
-    image: projectImg1,
-  },
-  {
-    title: Math.random(),
-    image: projectImg2,
-  },
-  {
-    title: Math.random(),
-    image: projectImg3,
-  },
-  {
-    title: Math.random(),
-    image: projectImg4,
-  },
-  {
-    title: Math.random(),
-    image: projectImg1,
-  },
-  {
-    title: Math.random(),
-    image: projectImg2,
-  },
-  {
-    title: Math.random(),
-    image: projectImg3,
-  },
-  {
-    title: Math.random(),
-    image: projectImg4,
-  },
-  {
-    title: Math.random(),
-    image: projectImg1,
-  },
-  {
-    title: Math.random(),
-    image: projectImg2,
-  },
-  {
-    title: Math.random(),
-    image: projectImg3,
-  },
-  {
-    title: Math.random(),
-    image: projectImg4,
-  },
-  {
-    title: Math.random(),
-    image: projectImg1,
-  },
-  {
-    title: Math.random(),
-    image: projectImg2,
-  },
-  {
-    title: Math.random(),
-    image: projectImg3,
-  },
-  {
-    title: Math.random(),
-    image: projectImg4,
-  },
-  {
-    title: Math.random(),
-    image: projectImg1,
-  },
-  {
-    title: Math.random(),
-    image: projectImg2,
-  },
-  {
-    title: Math.random(),
-    image: projectImg3,
-  },
-  {
-    title: Math.random(),
-    image: projectImg4,
-  },
-  {
-    title: Math.random(),
-    image: projectImg1,
-  },
-  {
-    title: Math.random(),
-    image: projectImg2,
-  },
-  {
-    title: Math.random(),
-    image: projectImg3,
-  },
-  {
-    title: Math.random(),
-    image: projectImg4,
-  },
+  // {
+  //   title: "Fancy login",
+  //   image: projectImg4,
+  //   url: "https://log-in-tony.netlify.app/",
+  //   skills: ["html", "js", "css"],
+  //   description:
+  //     "lorem ispum is a common dummy text used by progmamers to fill text content",
+  // },
+  // {
+  //   title: "Login form",
+  //   image: projectImg3,
+  //   url: "https://form-validation-xyz.netlify.app/",
+  //   skills: ["html", "js", "css"],
+  //   description:
+  //     "lorem ispum is a common dummy text used by progmamers to fill text content",
+  // },
 ];
 
 // Testimonials

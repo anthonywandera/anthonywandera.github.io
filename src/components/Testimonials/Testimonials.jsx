@@ -38,7 +38,12 @@ export default function Testimonials() {
             zIndex: `-${i}`,
           };
           return (
-            <Testimonial key={Math.random()} {...testimonial} style={style} />
+            <Testimonial
+              key={Math.random()}
+              {...testimonial}
+              render={i === 0}
+              style={style}
+            />
           );
         })}
       </main>

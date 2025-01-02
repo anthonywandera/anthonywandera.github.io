@@ -5,11 +5,19 @@ export default function Stats() {
     return state.projects;
   });
 
+  const clients = projects.reduce((client, project) => {
+    client.push(project.client);
+    return client;
+  }, []);
+
+  const absClients = new Set(clients);
+
   return (
     <div className="stats">
       <ul>
         <li>
-          <span className="numbers">280+</span> Direct Clients
+          <span className="numbers">{absClients.size}</span> Direct Client
+          {absClients.size === 1 ? "" : "s"}
         </li>
         <li>
           <span className="numbers">{projects.length}</span> Total Projects
