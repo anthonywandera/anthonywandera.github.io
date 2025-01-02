@@ -1,46 +1,30 @@
 import Project from "./Project";
-import { projectData } from "../../dummy-api";
-import { useEffect, useState } from "react";
+import { useState, useRef } from "react";
 import { left_svg, loader_svg, right_svg } from "../../assets/Icons";
 
-const ApiData = new Promise((resolve) => {
-  setTimeout(() => {
-    resolve(projectData);
-  }, 5000);
-});
+import { useSelector } from "react-redux";
 
-let projects = [];
-let projectsPerPage = 6;
 let totalPages = null;
 
 export default function Projects() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [projectList, setProjectList] = useState();
+  const projects = useRef();
   const [curPage, setCurPage] = useState(1);
-
-  useEffect(() => {
-    async function getApiData() {
-      projects = await ApiData;
-      totalPages = Math.ceil(projects.length / projectsPerPage);
-
-      const x = projects.slice(
-        (curPage - 1) * projectsPerPage,
-        curPage * projectsPerPage
-      );
-
-      setProjectList(x);
-      setIsLoading(false);
-    }
-
-    getApiData();
-  }, [curPage]);
+  const projectList = useSelector((state) => state.projects);
+  const isLoading = useSelector((state) => state.isLoading);
+  const projectsPerPage = useSelector((state) => state.projectsPerPage);
 
   let displayData = "";
 
   if (projectList && projectList.length > 0) {
-    displayData = projectList.map(({ title, image }) => {
+    projects.current = projectList.map(({ title, image }) => {
       return <Project key={title} title={title} image={image} />;
     });
+
+    displayData = projects.current.slice(
+      (curPage - 1) * projectsPerPage,
+      curPage * projectsPerPage
+    );
+    totalPages = Math.ceil(projectList.length / projectsPerPage);
   }
 
   if (projectList && projectList.length === 0) {

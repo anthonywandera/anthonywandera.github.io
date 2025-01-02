@@ -1,4 +1,10 @@
+import { useSelector } from "react-redux";
+
 export default function Stats() {
+  const projects = useSelector((state) => {
+    return state.projects;
+  });
+
   return (
     <div className="stats">
       <ul>
@@ -6,7 +12,7 @@ export default function Stats() {
           <span className="numbers">280+</span> Direct Clients
         </li>
         <li>
-          <span className="numbers">90</span> Total Projects
+          <span className="numbers">{projects.length}</span> Total Projects
         </li>
         <li>
           <span className="numbers">12</span> Digital Products

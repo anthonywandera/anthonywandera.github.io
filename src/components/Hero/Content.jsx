@@ -18,7 +18,7 @@ export default function Content() {
     <main className="hire-me-dialog">
       <h2>Get my services through</h2>
       <ul className="freelance-accounts">
-        <a href="">
+        <a href="https://www.upwork.com/freelancers/~0155756560a990066d?mp_source=share">
           <li>Upwork</li>
         </a>
         <a href="">
