@@ -24,7 +24,7 @@ export default function Testimonial({ image, author, comment, style, render }) {
         />
       </figure>
       <article>
-        <p className="comment">{comment}</p>
+        <p className="comment">{comment.slice(0, 70)}</p>
         <p className="author">{author}</p>
       </article>
     </div>
