@@ -46,7 +46,7 @@ export default function Projects() {
   }
 
   return (
-    <section className="section-projects" id="projects">
+    <section className="section-projects centered" id="projects">
       <h2>What I have done</h2>
       <h3>My Projects</h3>
       <div className="projects">

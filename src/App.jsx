@@ -11,6 +11,7 @@ import { projectData } from "./dummy-api.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { productsActions } from "./store/products.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 const ApiData = new Promise((resolve) => {
   setTimeout(() => {
@@ -18,6 +19,22 @@ const ApiData = new Promise((resolve) => {
   }, 5000);
 });
 
+// ############################
+function handleObserve(e) {
+  const entry = e[0];
+
+  if (entry.isIntersecting) {
+    entry.target.classList.add("displayed");
+    observer.unobserve(entry.target);
+  }
+}
+
+const observer = new IntersectionObserver(handleObserve, {
+  root: null,
+  threshold: "0.2",
+});
+
+// ############################
 function App() {
   const dispatchFn = useDispatch();
 
@@ -27,6 +44,13 @@ function App() {
     }
 
     getApiData();
+
+    // add observer
+    document.querySelectorAll("section").forEach((sect) => {
+      observer.observe(sect);
+    });
+
+    observer.observe(document.querySelector(".stats"));
   }, [dispatchFn]);
 
   return (
@@ -38,6 +62,7 @@ function App() {
       <Projects />
       <Testimonials />
       <Contact />
+      <Footer />
     </>
   );
 }

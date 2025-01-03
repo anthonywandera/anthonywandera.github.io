@@ -12,8 +12,6 @@ export default function Testimonial({ image, author, comment, style, render }) {
     });
   }, []);
 
-  console.log(render);
-
   return (
     <div className="testimonial" style={style}>
       <figure>

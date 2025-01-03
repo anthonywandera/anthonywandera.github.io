@@ -2,7 +2,7 @@ import image from "./img/profile-img.jpg";
 
 export default function About() {
   return (
-    <section className="section-about" id="about">
+    <section className="section-about centered" id="about">
       <img className="image-of-me" src={image} />
       <div className="content">
         <h2>Who Am I</h2>

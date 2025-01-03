@@ -1,11 +1,32 @@
-import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js";
+import { useRef, useEffect } from "react";
+
 import { instagram_svg, linkedin_svg, twitter_svg } from "../../assets/Icons";
 
 export default function Navigation() {
+  const links = useRef();
+
+  useEffect(() => {
+    const linksEl = links.current;
+
+    linksEl.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetEl = e.target;
+
+      if (!targetEl.closest("a")) return;
+
+      const href = targetEl.getAttribute("href");
+      const targetDestination = document.querySelector(href);
+
+      targetDestination.scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  }, []);
+
   return (
-    <nav className="navigation-bar">
+    <nav className="navigation-bar centered ">
       <h1 className="initials">AW.</h1>
-      <ul>
+      <ul ref={links}>
         <li>
           <a href="#home">Home</a>
         </li>

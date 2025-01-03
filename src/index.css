@@ -8,6 +8,10 @@ body {
   color: #eeee;
   background-color: #111;
   font-family: Rubik, sans-serif;
+  /* padding: 0 5rem; */
+}
+
+.centered {
   padding: 0 5rem;
 }
 
@@ -101,7 +105,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0.2rem;
+  padding: 1rem 5rem;
 
   position: sticky;
   z-index: 10;
@@ -220,8 +224,15 @@ h3 {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 50%);
+  opacity: 0;
+  transform: translate(-50%, 150%);
+  transition: all 0.5s linear;
   z-index: 1;
+}
+
+.stats.displayed {
+  opacity: 1;
+  transform: translate(-50%, 50%);
 }
 
 .stats ul {
@@ -495,89 +506,6 @@ progress::-webkit-progress-value {
   border-radius: 200rem;
 }
 
-/* SECTION */
-/* CONTACT */
-.section-contact .write-to-me {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 5rem;
-  /* row-gap: 1rem; */
-}
-
-.section-contact .contact-options {
-  display: grid;
-  grid-template-columns: 2fr auto;
-  gap: 6rem;
-}
-
-.write-to-me p {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.input-3 {
-  grid-column: 1/-1;
-}
-
-.input-3 div {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 3rem;
-  align-items: center;
-}
-
-.input-3 textarea {
-  resize: none;
-  width: 100%;
-}
-
-.write-to-me input,
-.write-to-me textarea {
-  padding: 0.5rem 0 0;
-  background: none;
-  border: none;
-  border-bottom: 2px solid cadetblue;
-  color: #aaa;
-}
-
-.write-to-me input:focus,
-.write-to-me textarea:focus {
-  outline: none;
-}
-
-.write-to-me .submit-btn {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  border: none;
-  background: none;
-  color: cadetblue;
-  font-size: 2rem;
-
-  cursor: pointer;
-}
-
-.other-options {
-  border: solid 1px cadetblue;
-  padding: 2rem;
-  border-radius: 0.6rem;
-}
-
-.other-options ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.other-options li {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
 /* Testimonials */
 .testimonials {
   position: relative;
@@ -592,7 +520,7 @@ progress::-webkit-progress-value {
   grid-template-columns: 1fr 3fr;
   gap: 5rem;
   align-items: center;
-  background-color: #444;
+  background-color: #222;
   height: 100%;
   padding: 2rem 6rem;
 
@@ -653,7 +581,7 @@ progress::-webkit-progress-value {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #444;
+  background-color: #222;
   border: none;
   border-radius: 50%;
   box-shadow: 0 0 1rem #111;
@@ -670,16 +598,96 @@ progress::-webkit-progress-value {
   right: 0;
 }
 
-/* bye */
-.section-bye {
+/* SECTION */
+/* CONTACT */
+.section-contact {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.contact-options {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
-.section-bye img {
-  height: 100%;
+.write-to-me {
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 2rem;
 }
 
-/* ######### */
+.write-to-me * {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  resize: none;
+  background-color: #222;
+  color: #fff;
+}
+
+.write-to-me button * {
+  transition: all 0.3s linear;
+}
+
+.write-to-me button:hover * {
+  background-color: #444;
+}
+
+.write-to-me *:focus {
+  outline: none;
+}
+
+.input-subject,
+.input-msg {
+  grid-column: 1/-1;
+}
+
+.input-msg {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+}
+
+/* ######################### */
+.sect-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem 0.3rem;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  background-color: #2225;
+}
+
+.other-options ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.other-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.7rem;
+}
+
+section:not(.section-hero) {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.5s linear;
+}
+
+section:not(.section-hero).displayed {
+  opacity: 1;
+  transform: translateY(0);
+}

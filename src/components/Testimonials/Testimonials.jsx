@@ -22,7 +22,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="section-testimonials" id="testimonials">
+    <section className="section-testimonials centered" id="testimonials">
       <h2>What they say about me</h2>
       <h3>Testimonials</h3>
       <main className="testimonials">
