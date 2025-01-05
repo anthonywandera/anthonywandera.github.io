@@ -675,6 +675,11 @@ progress::-webkit-progress-value {
   grid-column: 1/-1;
 }
 
+.write-to-me input,
+.write-to-me .input-msg {
+  width: 100%;
+}
+
 .input-msg {
   display: grid;
   grid-template-columns: 1fr auto;
