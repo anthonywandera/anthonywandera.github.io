@@ -31,6 +31,15 @@ export default function Content() {
     </main>
   );
 
+  function handleScrollTo(e) {
+    const btnEl = e.target;
+    const targetDestination = document.querySelector(btnEl.dataset.dest);
+
+    targetDestination.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="content">
       {openModal && (
@@ -46,7 +55,9 @@ export default function Content() {
         <p className="profession">UI/UX Frontend Web Developer</p>
         <menu className="actions">
           <button onClick={handleOpenModal}>Hire Me</button>
-          <button href="#">My Work</button>
+          <button data-dest="#projects" onClick={handleScrollTo}>
+            My Work
+          </button>
         </menu>
       </div>
       <div className="image">
