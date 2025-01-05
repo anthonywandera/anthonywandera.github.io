@@ -191,6 +191,10 @@
   .pagination {
     width: 100%;
   }
+
+  .input-msg {
+    gap: 1rem;
+  }
 }
 
 /* 568px */
@@ -275,10 +279,6 @@
 
   .project img {
     border-radius: 0.3rem;
-  }
-
-  .input-msg {
-    gap: 1rem;
   }
 
   .stats ul {
