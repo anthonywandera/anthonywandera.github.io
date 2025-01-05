@@ -12,3 +12,5 @@ export const send_svg = <ion-icon name="send-outline"></ion-icon>;
 export const linkedin_svg = <ion-icon name="logo-linkedin"></ion-icon>;
 export const right_svg = <i className="fa-solid fa-chevron-right"></i>;
 export const left_svg = <i className="fa-solid fa-chevron-left"></i>;
+export const menu_svg = <i className="fa-solid fa-bars"></i>;
+export const close_svg = <i className="fa-solid fa-xmark"></i>;

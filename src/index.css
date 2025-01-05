@@ -123,6 +123,31 @@ h3 {
   /* gap: 2rem; */
 }
 
+.menu-drop-icon {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+
+  display: none;
+}
+
+.navigation-bar .close-menu {
+  display: none;
+}
+
+.navigation-bar .open-menu {
+  display: block;
+}
+
+.navigation-bar.show .open-menu {
+  display: none;
+}
+
+.navigation-bar.show .close-menu {
+  display: block;
+}
+
 .navigation-bar li {
   padding: 0 1rem;
 }

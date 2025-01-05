@@ -1,6 +1,12 @@
 import { useRef, useEffect } from "react";
 
-import { instagram_svg, linkedin_svg, twitter_svg } from "../../assets/Icons";
+import {
+  close_svg,
+  instagram_svg,
+  linkedin_svg,
+  menu_svg,
+  twitter_svg,
+} from "../../assets/Icons";
 
 export default function Navigation() {
   const links = useRef();
@@ -23,9 +29,18 @@ export default function Navigation() {
     });
   }, []);
 
+  function handleClick(e) {
+    const navBarEl = e.target.closest(".navigation-bar");
+    navBarEl.classList.toggle("show");
+  }
+
   return (
-    <nav className="navigation-bar centered ">
+    <nav className="navigation-bar centered">
       <h1 className="initials">AW.</h1>
+      <button className="menu-drop-icon" onClick={handleClick}>
+        <span className="open-menu">{menu_svg}</span>
+        <span className="close-menu">{close_svg}</span>
+      </button>
       <ul ref={links}>
         <li>
           <a href="#home">Home</a>
